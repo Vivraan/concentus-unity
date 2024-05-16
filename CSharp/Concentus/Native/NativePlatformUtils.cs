@@ -5,6 +5,9 @@ using System.IO;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Text;
+#if UNITY_ANDROID
+using UnityEngine;
+#endif
 
 namespace Concentus.Native
 {
