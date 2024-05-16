@@ -97,8 +97,14 @@ namespace Concentus.Native
                 {
                     os = PlatformOperatingSystem.FreeBSD;
                 }
-#endif // !NET452_OR_GREATER
 #endif // NET6_0_OR_GREATER
+#if UNITY_ANDROID
+                else if (Application.platform == RuntimePlatform.Android)
+                {
+                    os = PlatformOperatingSystem.Android;
+                }
+#endif // UNITY_ANDROID
+#endif // !NET452_OR_GREATER
             }
 
             // Figure out our architecture
